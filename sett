@@ -1,0 +1,32 @@
+4 Answers
+
+19
+
+You can use React Native AsyncStorage for storing data to local storage of the device.
+
+import { AsyncStorage } from 'react-native'
+Use this to save data
+
+AsyncStorage.setItem('key', 'value');
+AsyncStorage accepts value as only string, so you may need to use stringify() before setting the value to AsyncStorage
+
+And to retrieve data use
+
+AsyncStorage.getItem('your key'); 
+Example Code :
+
+const KEY = 'USER_DATA'
+
+let keyValue = { name: yogi }
+
+AsyncStorage.setItem(KEY,keyValue);
+
+AsyncStorage.getItem(KEY).then(asyncStorageRes => {
+    console.log(JSON.parse(asyncStorageRes))
+});
+Share
+Follow
+edited Jan 6 '19 at 12:23
+
+yogeshwar nair
+74355 silver badges2020 bronze badges

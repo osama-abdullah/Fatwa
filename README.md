@@ -1,0 +1,2 @@
+# FatwaPedia
+ Soum and Zakah
